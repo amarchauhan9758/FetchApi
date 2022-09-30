@@ -123,7 +123,7 @@ export class News extends Component {
     let parsaedata = await data.json();
     console.log(parsaedata);
     this.setState({ article: parsaedata.articles });
-  }
+  } 
 
   render() {
     return (
@@ -136,8 +136,8 @@ export class News extends Component {
             return (
               <div className="my-10" key={element.content}>
                 <Newsitem
-                  title={element.title.slice}
-                  description={element.description}
+                  title={element.title.slice(0,30)}
+                  description={element.description.slice(0,100)}
                   urlToImage={element.urlToImage}
                   url={element.url}
                 />

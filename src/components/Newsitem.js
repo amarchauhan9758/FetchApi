@@ -6,21 +6,21 @@ export class Newsitem extends Component {
     let { title, description, urlToImage, url } = this.props;
 
     return (
-      <div className=" md:w-auto md:h-auto w-auto h-auto  p-10 mx-5 ">
-        <div className="py-5 bg-gray-400 px-5 border border-black rounded shadow-lg">
+      <div className=" md:w-auto md:h-auto w-auto h-[5rem]  p-10 mx-5 ">
+        <div className="py-5   border  rounded shadow-lg">
           <img
-            className="w-auto h-25 rounded-t-none"
+            className="w-auto h-[15rem] rounded-t-none"
             src={!urlToImage ?'https://miro.medium.com/max/498/1*5gJzummAqpBDGATo0fjU6Q.jpeg' : urlToImage}
             alt="CardGirl"
           />
-          <h1 className="text-xl font-semibold my-2">{title}</h1>
-          <p className="text-base mb-5 font-semibold text-gray-700">
+          <h1 className="text-xl px-2  text-left font-semibold my-2">{title}...</h1>
+          <p className=" text-left mb-5  px-2  text-gray-900">
             {description}
           </p>
           <a
             href={url}
             target="_blank"
-            className=" p-2 rounded-2xl mt-5 border border-blue-300  hover:bg-pink-400 text-sm shadow-lg font-semibold bg-blue-200"
+            className=" px-3 py-2 ring-1 rounded-2xl mt-5 border border-blue-300  hover:bg-pink-400 text-sm shadow-lg font-semibold bg-blue-200"
           >
             Read more
           </a>
